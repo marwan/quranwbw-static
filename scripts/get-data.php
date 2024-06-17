@@ -123,7 +123,7 @@ $verses = [
 for ($chapter = 1; $chapter <= 114; $chapter++) {
 	$url = "https://api.quranwbw.com/v1/verses?verses=$chapter:1,$chapter:$verses[$chapter]&word_type=1&word_translation=1&verse_translation=1,15&between=true";
 	$data = file_get_contents($url);
-	file_put_contents("../data/$chapter.json", $data);
+	file_put_contents("../data/v4/$chapter.json", $data);
 }
 
 echo "Done.";
